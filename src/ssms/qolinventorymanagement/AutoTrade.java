@@ -223,7 +223,7 @@ public class AutoTrade implements Serializable {
                             cargo.addItems(good.type, good.itemData, quantityToBuy);
                             fleetCargo.addAll(cargo);
                             good.transaction.getSubmarket().getCargo().removeAll(cargo);
-                            Global.getLogger(SSMSQoLInventoryManagementModPlugin.class).log(Level.INFO, "Items were free: "+good.itemData+" "+quantityToBuy);
+                            Global.getLogger(SSMSQoLInventoryManagementModPlugin.class).log(Level.DEBUG, "Items were free: "+good.itemData+" "+quantityToBuy);
                         } else {
                             good.transaction.getBought().addItems(good.type, good.itemData, quantityToBuy);
                         }

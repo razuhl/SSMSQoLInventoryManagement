@@ -67,7 +67,7 @@ public class CampaignPlugin extends BaseCampaignPlugin implements Serializable {
                 }
             }
             
-            logger.log(Level.INFO, "Trademode: "+tm);
+            logger.log(Level.DEBUG, "Trademode: "+tm);
             if ( tm == CoreUITradeMode.NONE ) return null;
             
             if ( weaponStorage != null ) {
@@ -80,7 +80,7 @@ public class CampaignPlugin extends BaseCampaignPlugin implements Serializable {
                 autoTrade.trade(interactionTarget, tm);
             }
         } else {
-            logger.log(Level.INFO, "not a market");
+            logger.log(Level.DEBUG, "not a market");
         }
         return null;
     }
@@ -110,8 +110,6 @@ public class CampaignPlugin extends BaseCampaignPlugin implements Serializable {
     }
     
     private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
-        final Logger logger = Global.getLogger(SSMSQoLInventoryManagementModPlugin.class);
-        logger.log(Level.INFO, "Reading CampaingPlugin");
         int storedVersion = in.readInt();
         weaponStorage = (WeaponStorage) in.readObject();
         safeStorage = (SafeStorage) in.readObject();

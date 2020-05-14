@@ -62,7 +62,7 @@ public class SSMSQoLInventoryManagementModPlugin extends BaseModPlugin {
         CampaignPlugin cp = null;
         List<com.fs.starfarer.api.campaign.CampaignPlugin> plugins = CampaignEngine.getInstance().getPlugins();
         for ( com.fs.starfarer.api.campaign.CampaignPlugin plugin : plugins ) {
-            if ( plugin.getId().equals(CampaignPlugin.ID) ) {
+            if ( plugin.getId() != null && plugin.getId().equals(CampaignPlugin.ID) ) { 
                 logger.log(Level.INFO, "plugin loaded");
                 cp = (CampaignPlugin) plugin;
                 break;
