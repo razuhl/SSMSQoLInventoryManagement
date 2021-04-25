@@ -1,10 +1,13 @@
 {
 	"id":"SSMSQoLInventoryManagement",
 	"author":"Malte Schulze",
-	"name":"SSMS QoL Inventory Management",
-	"version":"1.0",
+	"name":"20 SSMS QoL Inventory Management",
+	"version":"1.1",
 	"description":"This mod allows automation of recurring inventory tasks.",
-	"gameVersion":"0.9.0",
+	"gameVersion":"0.95a-RC15",
 	"jars":["jars/SSMSQoLInventoryManagement.jar"],
+	"dependencies":[
+		{"id":"SSMSQoL", "name":"SSMS QoL", "version":{"major":1, "minor":5}},
+	],
 	"modPlugin":"ssms.qolinventorymanagement.SSMSQoLInventoryManagementModPlugin"
 }
